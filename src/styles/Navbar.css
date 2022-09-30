@@ -1,0 +1,163 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2vh 6vw;
+  width: 100%;
+  flex-wrap: wrap;
+  z-index: 1;
+  
+}
+
+.navbar h3 a{
+  color: #FEE56E;
+  text-decoration: none;
+  font-family: "Nighty";
+  font-weight: normal;
+}
+
+/* Bouton du menu */
+.menuBtn {
+  border: none;
+  background-color: transparent;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  justify-content: space-evenly;
+  cursor: pointer;
+}
+
+.menu-bar-top,
+.menu-bar-bottom {
+  width: 22px;
+  height: 2px;
+  background-color: #082331;
+  position: relative;
+  margin: -6px 0;
+}
+
+.menu-bar-top {
+  left: -5px;
+  margin: 0;
+}
+
+.menu-bar-bottom {
+  right: -5px;
+  margin: 0;
+}
+
+#open .menu-bar-top{
+  left: 0;
+  transform: translateY(0) rotate(45deg);
+}
+
+#open .menu-bar-bottom {
+  right: 0;
+  transform: translateY(0) rotate(-45deg);
+}
+
+#open .menuBtn {
+  transform: rotate(180deg);
+}
+/* Animation bouton menu */
+.moveL {
+  animation: move-l 1s ease-in-out;
+}
+
+.moveR {
+  animation: move-r 1s ease-in-out;
+}
+
+.closeBtn {
+  animation: close 1s ease-in;
+}
+
+/* Ouverture / Fermeture menu */
+#open {
+  position: fixed;
+  top: 0;
+}
+
+.links {
+
+  background-color: #FDF7F2;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: auto;
+  z-index: -1;
+  font-family: "Gavency", serif;
+  padding-top: 12vh;
+}
+
+.menuItem {
+  padding: 5vh 0;
+  color: #082331;
+  text-decoration: none;
+  font-size: 8vh;
+  font-weight: light;
+}
+
+.option-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: last baseline;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  bottom: 0;
+  margin-top: 6vh;
+}
+
+.option-nav li {
+  list-style-type: none;
+  padding: 2vh 0;
+}
+
+.option-nav a {
+  font-size: small;
+}
+.option-nav .lang {
+  font-size: small;
+}
+
+.option-nav button{
+  background-color: transparent;
+  border: none;
+}
+#close .links, #close .option-nav {
+  display: none;
+}
+
+
+
+/* ANIMATIONS */
+@keyframes move-l{
+  0% {
+    margin-left: -2vw;
+  }
+  100% {
+    margin-left: 0;
+  }
+}
+
+@keyframes move-r {
+  0% {
+    margin-left: 0;
+  }
+
+  100%  {
+    margin-left: -2vw;
+  }
+}
+
+
+
+
